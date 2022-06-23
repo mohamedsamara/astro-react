@@ -12,15 +12,18 @@ const ProductList = (props: ProductListProps) => {
       {products.map((product) => (
         <li key={product.id} className="list-none bg-white rounded-md">
           <a
-            className="flex flex-col justify-center items-center h-full p-2 text-sm hover:underline"
+            className="flex flex-col h-full p-2 text-sm"
             href={`/products/${product.id}`}
           >
             <img
               src={product.image}
               alt={product.title}
-              className="min-h-[200px] max-h-[220px] mx-auto"
+              className="min-h-[220px] max-h-[220px] mx-auto"
             />
-            <p className="py-3">{product.title}</p>
+            <p className="py-3 truncate hover:underline">{product.title}</p>
+            <span className="block py-2 text-2xl font-semibold">
+              ${product.price}
+            </span>
           </a>
         </li>
       ))}
