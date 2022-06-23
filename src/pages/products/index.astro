@@ -1,23 +1,20 @@
 ---
+import Layout from "../../layouts/Default.astro";
 import { fetchProducts } from "../../data/products";
 import ProductList from "../../components/ProductList";
 
 const products = await fetchProducts();
 ---
 
-<html lang="en">
-  <head> </head>
-
-  <body>
-    <main class="wrapper">
-      <section class="py-8 px-4">
-        <h2
-          class="text-lg font-black text-black uppercase border-b-2 border-gray-100 pb-2"
-        >
-          All Products
-        </h2>
-        <ProductList {products} />
-      </section>
-    </main>
-  </body>
-</html>
+<Layout title="shop">
+  <main class="min-h-full bg-isabelline">
+    <section class="container mx-auto py-8 px-4 sm:px-0">
+      <h2
+        class="text-lg font-black text-black uppercase border-b-2 border-gray-100 pb-2"
+      >
+        All Products
+      </h2>
+      <ProductList {products} />
+    </section>
+  </main>
+</Layout>

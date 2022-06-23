@@ -1,23 +1,15 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <style>
-      html,
-      body {
-        font-family: system-ui;
-        margin: 0;
-      }
-      body {
-        padding: 2rem;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1 class="text-black	text-lg">Hello, React!</h1>
-      <a class="hover:underline" href={`/products/`}>See Products</a>
-    </main>
-  </body>
-</html>
+---
+import Layout from "../layouts/Default.astro";
+---
+
+<Layout title="Home Page">
+  <main class="min-h-full bg-isabelline">
+    <section class="container mx-auto py-8 px-4 sm:px-0">
+      <section class="bg-white p-8 text-center rounded-md">
+        <a class="hover:underline text-2xl" href={`/products/`}
+          >Explore Products</a
+        >
+      </section>
+    </section>
+  </main>
+</Layout>

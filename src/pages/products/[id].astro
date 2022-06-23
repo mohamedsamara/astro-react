@@ -1,4 +1,5 @@
 ---
+import Layout from "../../layouts/Default.astro";
 import { fetchProducts } from "../../data/products";
 import ProductDetails from "../../components/ProductDetails";
 
@@ -17,12 +18,10 @@ const { id } = Astro.params;
 const { product } = Astro.props;
 ---
 
-<html lang="en">
-  <head> </head>
-
-  <body>
-    <main class="wrapper">
+<Layout title={product.title}>
+  <main class="min-h-full	bg-isabelline">
+    <section class="container mx-auto py-8 px-4 sm:px-0">
       <ProductDetails {product} />
-    </main>
-  </body>
-</html>
+    </section>
+  </main>
+</Layout>
