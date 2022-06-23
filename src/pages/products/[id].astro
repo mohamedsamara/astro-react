@@ -1,0 +1,28 @@
+---
+import { fetchProducts } from "../../data/products";
+import ProductDetails from "../../components/ProductDetails";
+
+export async function getStaticPaths() {
+  const products = await fetchProducts();
+
+  return products.map((product) => {
+    return {
+      params: { id: product.id.toString() },
+      props: { product },
+    };
+  });
+}
+
+const { id } = Astro.params;
+const { product } = Astro.props;
+---
+
+<html lang="en">
+  <head> </head>
+
+  <body>
+    <main class="wrapper">
+      <ProductDetails {product} />
+    </main>
+  </body>
+</html>
