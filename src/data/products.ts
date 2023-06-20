@@ -17,6 +17,10 @@ export const generateProducts = async () => {
 };
 
 export const fetchProducts = async () => {
-  const response = await fetch("https://fakestoreapi.com/products");
-  return await response.json();
+  try {
+    const response = await fetch("https://fakestoreapi.com/products");
+    return await response.json();
+  } catch (error) {
+    return [];
+  }
 };

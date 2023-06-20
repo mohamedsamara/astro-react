@@ -11,17 +11,17 @@ This project is an example of using astro to build static products pages ahead o
 ## Start development
 
 ```
-$ yarn dev
+yarn dev
 ```
 
 ## Simple build for production
 
 ```
-$ yarn build
+yarn build
 ```
 
 ## Preview production build
 
 ```
-$ yarn preview
+yarn preview
 ```

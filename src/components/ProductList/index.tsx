@@ -8,7 +8,7 @@ const ProductList = (props: ProductListProps) => {
   const { products } = props;
 
   return (
-    <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 list-disc list-inside py-2">
+    <ul className="grid grid-cols-1 gap-4 py-2 list-disc list-inside md:grid-cols-3">
       {products.map((product) => (
         <li key={product.id} className="list-none bg-white rounded-md">
           <a
